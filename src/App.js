@@ -6,6 +6,7 @@ import DashBoard from "./page/DashBoard";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Details from "./page/Details";
+
 function App() {
   const [data, setData] = useState([]);
 
@@ -34,7 +35,9 @@ function App() {
         <Route exact path="/">
           <DashBoard data={data} />
         </Route>
-        <Route path="/details" component={Details} />
+        <Route path="/details">
+          <Details />
+        </Route>
       </Switch>
       <Footer />
     </>

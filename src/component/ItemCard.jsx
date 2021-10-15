@@ -2,12 +2,13 @@ import React from "react";
 import "antd/dist/antd.css";
 import { Card } from "antd";
 import { PlusCircleTwoTone } from "@ant-design/icons";
-import {useHistory} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
-const ItemCard = ({ src, description, name }) => {
-  const history = useHistory()
+const ItemCard = ({ id, src, description, name, category, time, price, phone, available }) => {
+  console.log(time);
+
   return (
     <Card
       hoverable
@@ -20,12 +21,28 @@ const ItemCard = ({ src, description, name }) => {
         justifyContent: "space-between",
       }}
       cover={
-        <img
-        onClick={()=>history.push('/details')}
-          style={{ width: "15rem", height: "15rem" }}
-          alt="example"
-          src={src}
-        />
+        <Link
+          to={{
+            pathname: "/details",
+            state: {
+              src,
+              description,
+              name,
+              category,
+              id,
+              time,
+              price,
+              phone,
+              available
+            },
+          }}
+        >
+          <img
+            style={{ width: "15rem", height: "15rem" }}
+            alt="example"
+            src={src}
+          />
+        </Link>
       }
     >
       <div
