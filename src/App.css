@@ -4,9 +4,10 @@
 
 .appBar{
   display: flex;
+  color: white;
   justify-content: space-between;
   border: 1px solid black;
   padding: 1rem;
   border-radius: 10px;
-  background: chocolate;
+  background: rgb(62, 76, 94);
 }
