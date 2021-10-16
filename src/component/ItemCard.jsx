@@ -16,6 +16,7 @@ const ItemCard = ({
   price,
   phone,
   available,
+  singleItem,
 }) => {
   return (
     <Card
@@ -65,7 +66,16 @@ const ItemCard = ({
           title={name.slice(0, 15)}
           description={description.slice(0, 40)}
         />
-        <PlusCircleTwoTone style={{ fontSize: "2rem" }} />
+        <Link
+          to={{
+            pathname: "/cart",
+            state: {
+              singleItem,
+            },
+          }}
+        >
+          <PlusCircleTwoTone style={{ fontSize: "2rem" }} />
+        </Link>
       </div>
     </Card>
   );

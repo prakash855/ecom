@@ -2,19 +2,25 @@ import React from "react";
 import { ShoppingTwoTone } from "@ant-design/icons";
 import { Affix } from "antd";
 import Logo from "../assets/logo.jpg";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
+  const history = useHistory();
   return (
     <Affix>
       <div className="appBar">
         <img
+          onClick={() => history.push("/")}
           style={{ width: "4rem", borderRadius: "10px" }}
           src={Logo}
           alt=""
         />
         <div className="text">Header / رأس/ शीर्षणी</div>
         <div style={{ display: "flex" }}>
-          <ShoppingTwoTone style={{ fontSize: "2rem" }} />
+          <ShoppingTwoTone
+            onClick={() => history.push("/cart")}
+            style={{ fontSize: "2rem" }}
+          />
           <sup
             style={{
               border: "1px solid",

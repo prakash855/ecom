@@ -6,6 +6,7 @@ import DashBoard from "./page/DashBoard";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Details from "./page/Details/Details";
+import Cart from "./page/Cart/Cart";
 
 function App() {
   const [data, setData] = useState([]);
@@ -27,7 +28,7 @@ function App() {
         console.log(error);
       });
   }, []);
-  
+
   return (
     <>
       <Header />
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/details">
           <Details />
+        </Route>
+        <Route path="/cart">
+          <Cart />
         </Route>
       </Switch>
       <Footer />

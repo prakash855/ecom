@@ -5,6 +5,7 @@
 }
 .detailsPicture {
   max-width: 42rem;
+  max-height: 35rem;
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 2px 2px 5px black;

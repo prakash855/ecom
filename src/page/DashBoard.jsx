@@ -11,8 +11,9 @@ const DashBoard = ({ data }) => {
         justifyContent: "space-evenly",
       }}
     >
-      {data.map((eachItem) => (
+      {data.map((eachItem, index) => (
         <ItemCard
+          singleItem={data[index]}
           price={eachItem.price}
           time={eachItem.createdAt.split(" ")[0]}
           id={eachItem.id}
