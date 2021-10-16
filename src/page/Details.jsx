@@ -1,8 +1,8 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Button, Card, message, Alert } from "antd";
+import { Button, Card, message } from "antd";
 import { useLocation } from "react-router-dom";
-import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
+import { CheckOutlined, CloseOutlined, SmileOutlined } from "@ant-design/icons";
 
 const Details = () => {
   const data = useLocation();
@@ -18,18 +18,18 @@ const Details = () => {
           }}
         >
           <img
-            style={{ maxWidth: "60rem", maxHeight: "50rem" }}
+            style={{ maxWidth: "30rem", maxHeight: "30rem" }}
             src={state.src}
             alt=""
           />
           <div className="description">
-            <h2>Description:</h2> <br />
+            <h2>Description:</h2>
             <h3>{`Product ID:${state.id}`}</h3>
             <b className="desc">{`About: ${state.description}`}</b>
-            <p>{`Launched at: ${state.time}`}</p>
+            <p>{`Launched at: ${state.time.split("-").reverse().join("-")}`}</p>
             <b>{`Price: ${state.price}د.إ`}</b>
             {/* currency in dubai is dirham, wich is written as د.إ */}
-            <br />
+
             <b>{`Contact Number of the Seller: ${state.phone}`}</b>
             <h4>
               {state.available === "APPROVED"
@@ -42,8 +42,12 @@ const Details = () => {
           </div>
         </div>
         <Button
+        type="primary"
           onClick={() =>
-            message.success("Congratulations! Your order id placed")
+            message.success([
+              "Congratulations! Your order is placed",
+              <SmileOutlined style={{ marginLeft: "0.5rem" }} />,
+            ])
           }
         >
           Buy Now

@@ -6,9 +6,17 @@ import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
-const ItemCard = ({ id, src, description, name, category, time, price, phone, available }) => {
-  console.log(time);
-
+const ItemCard = ({
+  id,
+  src,
+  description,
+  name,
+  category,
+  time,
+  price,
+  phone,
+  available,
+}) => {
   return (
     <Card
       hoverable
@@ -33,11 +41,12 @@ const ItemCard = ({ id, src, description, name, category, time, price, phone, av
               time,
               price,
               phone,
-              available
+              available,
             },
           }}
         >
           <img
+            className="image"
             style={{ width: "15rem", height: "15rem" }}
             alt="example"
             src={src}

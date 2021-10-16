@@ -11,3 +11,7 @@
   border-radius: 10px;
   background: rgb(62, 76, 94);
 }
+.description{
+  display: flex;
+  flex-direction: column;
+}
