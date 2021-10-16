@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import DashBoard from "./page/DashBoard";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
-import Details from "./page/Details";
+import Details from "./page/Details/Details";
 
 function App() {
   const [data, setData] = useState([]);

@@ -1,0 +1,39 @@
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.detailsPicture {
+  max-width: 42rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+}
+.desc {
+  color: #007185;
+}
+.avail {
+  color: green;
+}
+.price {
+  color: red;
+}
+@media (max-width:320px){
+  .detailsPicture{
+    max-width: 13.5rem;
+  }
+}
+@media (min-width:321px) and (max-width:424px){
+  .detailsPicture{
+    max-width: 17rem;
+  }
+}
+@media (min-width:425px) and (max-width:767px){
+  .detailsPicture{
+    max-width: 20rem;
+  }
+}
