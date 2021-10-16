@@ -1,13 +1,18 @@
 import React from "react";
 import { ShoppingTwoTone } from "@ant-design/icons";
 import { Affix } from "antd";
+import Logo from "../assets/logo.jpg";
 
 const Header = () => {
   return (
     <Affix>
       <div className="appBar">
-        <div className="logo">logo</div>
-        <div className="text">Header</div>
+        <img
+          style={{ width: "4rem", borderRadius: "10px" }}
+          src={Logo}
+          alt=""
+        />
+        <div className="text">Header / رأس/ शीर्षणी</div>
         <div style={{ display: "flex" }}>
           <ShoppingTwoTone style={{ fontSize: "2rem" }} />
           <sup

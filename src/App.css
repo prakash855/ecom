@@ -6,10 +6,10 @@
   display: flex;
   color: white;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid black;
   padding: 1rem;
-  border-radius: 10px;
-  background: rgb(62, 76, 94);
+  background: black
 }
 .description{
   display: flex;
