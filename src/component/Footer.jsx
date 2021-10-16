@@ -1,7 +1,5 @@
-import { ShoppingCartOutlined } from "@ant-design/icons";
 import { Affix } from "antd";
 import React from "react";
-import Logo from "../assets/logo.jpg";
 
 const Footer = () => {
   return (
