@@ -1,7 +1,7 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import DashBoard from "./page/DashBoard";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
