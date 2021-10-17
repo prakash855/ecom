@@ -1,7 +1,7 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
-import {  useState } from "react";
+import { useState } from "react";
 import DashBoard from "./page/DashBoard";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
@@ -16,6 +16,8 @@ function App() {
     url: "http://api.products.luezoid.com/products?page=2",
     headers: {
       Authorization: "Bearer ULxG9gG98KDGPql/BFI/woCN9T8=",
+      "Content-Type":
+        "application/x-www-form-urlencoded; charset=UTF-8;application/json",
     },
   };
 
