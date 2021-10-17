@@ -13,7 +13,7 @@ function App() {
 
   var config = {
     method: "get",
-    url: "http://api.products.luezoid.com/products?page=2",
+    url: "https://api.products.luezoid.com/products?page=2",
     headers: {
       Authorization: "Bearer ULxG9gG98KDGPql/BFI/woCN9T8=",
       "Content-Type":
