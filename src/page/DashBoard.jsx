@@ -12,6 +12,7 @@ const DashBoard = ({ data }) => {
     >
       {data.map((eachItem, index) => (
         <ItemCard
+          key={eachItem.id}
           singleItem={data[index]}
           price={eachItem.price}
           time={eachItem.createdAt.split(" ")[0]}
