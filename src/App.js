@@ -11,25 +11,15 @@ import Cart from "./page/Cart/Cart";
 function App() {
   const [data, setData] = useState([]);
 
-  var config = {
-    method: "get",
-    url: "https://api.products.luezoid.com/products?page=2",
-    headers: {
-      Authorization: "Bearer ULxG9gG98KDGPql/BFI/woCN9T8=",
-      "Content-Type":
-        "application/x-www-form-urlencoded; charset=UTF-8;application/json",
-    },
-  };
-
-  // useEffect(() => {
-  axios(config)
-    .then(function (response) {
-      setData(response.data.data.items);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  // }, []);
+  const instance = axios.create({
+    baseURL: 'http://api.products.luezoid.com',
+    headers: {'Authorization': 'Bearer ULxG9gG98KDGPql/BFI/woCN9T8='}
+  });
+  
+  instance.get('/products?page=2')
+  .then(response => {
+    setData(response.data.data.items)
+  })
 
   return (
     <>
