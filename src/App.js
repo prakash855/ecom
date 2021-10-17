@@ -19,15 +19,15 @@ function App() {
     },
   };
 
-  useEffect(() => {
-    axios(config)
-      .then(function (response) {
-        setData(response.data.data.items);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
+  // useEffect(() => {
+  axios(config)
+    .then(function (response) {
+      setData(response.data.data.items);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  // }, []);
 
   return (
     <>
