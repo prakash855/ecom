@@ -2,7 +2,6 @@ import React from "react";
 import ItemCard from "../component/ItemCard";
 
 const DashBoard = ({ data }) => {
-  console.log(data);
   return (
     <div
       style={{

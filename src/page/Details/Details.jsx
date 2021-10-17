@@ -11,6 +11,7 @@ import {
 import "./Details.css";
 
 const Details = () => {
+  
   const history = useHistory();
   const data = useLocation();
   const { state } = data;
